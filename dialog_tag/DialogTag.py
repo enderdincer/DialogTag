@@ -13,7 +13,7 @@ from . import __version__
 
 class DialogTag:
     def __init__(self, model_name):
-        tf.logging.set_verbosity(tf.logging.ERROR)
+        tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
         self.__model_name = model_name
 
         self.__lib_path = f"{str(Path.home())}"+ model_location["MODEL"]
